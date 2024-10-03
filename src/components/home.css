@@ -1,0 +1,13 @@
+.custom-headshot {
+    height: auto; /* Allow the height to adjust automatically */
+    max-height: 100%; /* Prevent the image from exceeding its parent's height */
+    width: auto; /* Allow width to adjust while maintaining aspect ratio */
+    /* Add other styling as needed */
+  }
+  
+.button1{
+    max-width: 400px;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+}
