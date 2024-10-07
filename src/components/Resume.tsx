@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Resume.css";
+import resume_pdf from "../assets/ACD  Resume 9-24.pdf";
 
 const Resume: React.FC = () => {
   useEffect(() => {
@@ -17,7 +18,9 @@ const Resume: React.FC = () => {
           <Row className="justify-content-center">
             <Col md={8}>
               <h1 className="text-center">My Resume</h1>
-              <h5 className="text-center">Download PDF</h5>
+              <a href={resume_pdf} download="Aidan_DeGooyer_Resume.pdf">
+                <h5 className="text-center">Download PDF</h5>
+              </a>
 
               <section className="resume-section">
                 <h3 className="display-6">Personal Information</h3>

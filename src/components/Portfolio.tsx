@@ -1,5 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Button, ButtonGroup } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  ButtonGroup,
+  Accordion,
+  Image,
+} from "react-bootstrap";
+import hs1 from "../assets/Screenshot 2024-10-06 at 8.41.09 PM.png";
+import hs2 from "../assets/Screenshot 2024-10-06 at 8.41.22 PM.png";
 import "./Portfolio.css";
 
 const Portfolio: React.FC = () => {
@@ -8,12 +18,11 @@ const Portfolio: React.FC = () => {
     element?.scrollIntoView();
     const handleResize = () => {
       setIsScreenLarge(window.innerWidth > 768);
-      setIsStacked(window.innerWidth > 768);
+      setIsStacked(window.innerWidth < 768);
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -22,8 +31,16 @@ const Portfolio: React.FC = () => {
   var body = 7;
 
   const [isStacked, setIsStacked] = useState(false);
-
+  const [activeKey, setActiveKey] = useState<string | null>(null);
   const [isScreenLarge, setIsScreenLarge] = useState(window.innerWidth > 540); // Check initial screen width
+
+  const toggleAccordion = () => {
+    setActiveKey(activeKey === "0" ? null : "0");
+  };
+
+  const handleAccordionClick = (key: string) => {
+    setActiveKey(activeKey === key ? null : key);
+  };
 
   return (
     <>
@@ -61,7 +78,7 @@ const Portfolio: React.FC = () => {
               {" "}
               <h1>Water Meter Project</h1>
               <h6 className="text-secondary description">
-                Raspberry Pi, Django, React, Gunicorn, nginx
+                Raspberry Pi, Django, React, Gunicorn, nginx, MySQL
               </h6>
             </Col>
             <Col md={isStacked ? "9" : body}>
@@ -79,10 +96,22 @@ const Portfolio: React.FC = () => {
                   water delivery, saving hundreds in expedited delivery fees.
                 </li>
               </ul>
-              <Button className="view">View Project</Button>
-              <Button variant="secondary" className="view">
-                View Project Source
-              </Button>
+              <a
+                href="https://aidandegooyer.github.io/water-meter/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="view">View Project</Button>
+              </a>
+              <a
+                href="https://github.com/aidandegooyer/water-meter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" className="view">
+                  View Project Source
+                </Button>
+              </a>
             </Col>
           </Row>
           <Row className="justify-content-center project">
@@ -104,10 +133,22 @@ const Portfolio: React.FC = () => {
                   image of the product.
                 </li>
               </ul>
-              <Button className="view">View Project</Button>
-              <Button variant="secondary" className="view">
-                View Project Source
-              </Button>
+              <a
+                href="https://github.com/aidandegooyer/evoML"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="view">View Project</Button>
+              </a>
+              <a
+                href="https://github.com/aidandegooyer/evoML"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" className="view">
+                  View Project Source
+                </Button>
+              </a>
             </Col>
           </Row>
           <Row className="justify-content-center project">
@@ -125,9 +166,15 @@ const Portfolio: React.FC = () => {
               <Button className="view" disabled>
                 View Project
               </Button>
-              <Button variant="secondary" className="view">
-                View Project Source
-              </Button>
+              <a
+                href="https://github.com/aidandegooyer/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" className="view">
+                  View Project Source
+                </Button>
+              </a>
             </Col>
           </Row>
 
@@ -152,9 +199,15 @@ const Portfolio: React.FC = () => {
               <Button className="view" disabled>
                 View Project
               </Button>
-              <Button variant="secondary" className="view">
-                View Project Source
-              </Button>
+              <a
+                href="https://github.com/aidandegooyer/evoML"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" className="view">
+                  View Project Source
+                </Button>
+              </a>
             </Col>
           </Row>
           <Row className="justify-content-center project">
@@ -175,10 +228,22 @@ const Portfolio: React.FC = () => {
                   class including evolutionary strategies with mutation.
                 </li>
               </ul>
-              <Button className="view">View Project</Button>
+              <Button onClick={toggleAccordion} className="view">
+                {activeKey === "0" ? "Hide Project" : "View Project"}
+              </Button>
               <Button variant="secondary" className="view" disabled>
                 View Project Source
               </Button>
+
+              <Accordion activeKey={activeKey} onSelect={handleAccordionClick}>
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>Mock-Ups</Accordion.Header>
+                  <Accordion.Body>
+                    <Image className="project" rounded fluid src={hs1} />
+                    <Image rounded fluid src={hs2} />
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </Col>
           </Row>
         </Container>

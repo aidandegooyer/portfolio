@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <Row className="justify-content-center align-items-center">
           <Col xs={12} md={3} className="d-none d-md-block">
             <Image
-              src="https://placehold.co/400"
+              src={headshot}
               roundedCircle
               fluid
               className="custom-headshot"
