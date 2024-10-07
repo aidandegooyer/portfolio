@@ -38,10 +38,6 @@ const Portfolio: React.FC = () => {
     setActiveKey(activeKey === "0" ? null : "0");
   };
 
-  const handleAccordionClick = (key: string) => {
-    setActiveKey(activeKey === key ? null : key);
-  };
-
   return (
     <>
       <a id="a"></a>
@@ -235,7 +231,7 @@ const Portfolio: React.FC = () => {
                 View Project Source
               </Button>
 
-              <Accordion activeKey={activeKey} onSelect={handleAccordionClick}>
+              <Accordion activeKey={activeKey}>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Mock-Ups</Accordion.Header>
                   <Accordion.Body>
