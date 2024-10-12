@@ -70,14 +70,17 @@ const Portfolio: React.FC = () => {
             </Col>
           </Row>
           <Row className="justify-content-center project">
-            <Col xs={12} className={isStacked ? "col-12 test" : "col-md-3"}>
+            <Col
+              xs={12}
+              className={isStacked ? "col-12 text-center" : "col-md-3"}
+            >
               {" "}
               <h1>Water Meter Project</h1>
               <h6 className="text-secondary description">
                 Raspberry Pi, Django, React, Gunicorn, nginx, MySQL
               </h6>
             </Col>
-            <Col md={isStacked ? "9" : body}>
+            <Col md={isStacked ? "6" : body}>
               <ul>
                 <li>
                   Designed and built a Raspberry Pi hardware sensing solution
@@ -111,13 +114,16 @@ const Portfolio: React.FC = () => {
             </Col>
           </Row>
           <Row className="justify-content-center project">
-            <Col xs={12} className={isStacked ? "col-12 test" : "col-md-3"}>
+            <Col
+              xs={12}
+              className={isStacked ? "col-12 text-center" : "col-md-3"}
+            >
               <h1>Secondhand Marketplace</h1>
               <h6 className="text-secondary description">
                 Django, KoboldCPP, Blip2, React
               </h6>
             </Col>
-            <Col md={isStacked ? "9" : body}>
+            <Col md={isStacked ? "6" : body}>
               <ul>
                 <li>
                   With my team, developed an inventory software solution
@@ -148,11 +154,14 @@ const Portfolio: React.FC = () => {
             </Col>
           </Row>
           <Row className="justify-content-center project">
-            <Col xs={12} className={isStacked ? "col-12 test" : "col-md-3"}>
+            <Col
+              xs={12}
+              className={isStacked ? "col-12 text-center" : "col-md-3"}
+            >
               <h1>Portfolio Website</h1>
               <h6 className="text-secondary description">React, Bootstrap</h6>
             </Col>
-            <Col md={isStacked ? "9" : body}>
+            <Col md={isStacked ? "6" : body}>
               <ul>
                 <li>
                   Designed and developed a responsive site to show off my
@@ -175,13 +184,16 @@ const Portfolio: React.FC = () => {
           </Row>
 
           <Row className="justify-content-center project">
-            <Col xs={12} className={isStacked ? "col-12 test" : "col-md-3"}>
+            <Col
+              xs={12}
+              className={isStacked ? "col-12 text-center" : "col-md-3"}
+            >
               <h1>Evolutionary Machine Learning</h1>
               <h6 className="text-secondary description">
                 TensorFlow, CUDA, NumPy, Pandas
               </h6>
             </Col>
-            <Col md={isStacked ? "9" : body}>
+            <Col md={isStacked ? "6" : body}>
               <ul>
                 <li>
                   Created, trained, and tested a variety of models (Neural
@@ -207,13 +219,16 @@ const Portfolio: React.FC = () => {
             </Col>
           </Row>
           <Row className="justify-content-center project">
-            <Col xs={12} className={isStacked ? "col-12 test" : "col-md-3"}>
+            <Col
+              xs={12}
+              className={isStacked ? "col-12 text-center" : "col-md-3"}
+            >
               <h1>HigherSkills</h1>
               <h6 className="text-secondary description">
                 Django, OpenAI, MySQL, Figma
               </h6>
             </Col>
-            <Col md={isStacked ? "9" : body}>
+            <Col md={isStacked ? "6" : body}>
               <ul>
                 <li>
                   Created, trained, and tested a variety of models (Neural
