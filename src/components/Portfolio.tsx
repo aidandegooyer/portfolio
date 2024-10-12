@@ -231,12 +231,15 @@ const Portfolio: React.FC = () => {
             <Col md={isStacked ? "6" : body}>
               <ul>
                 <li>
-                  Created, trained, and tested a variety of models (Neural
-                  Network, Particle Swarm, etc.) on a dataset.
+                  Designed, mocked-up, and developed AI-driven software using
+                  OpenAI API and began training an in-house model.
+                  <li>
+                    Collected usage data to improve the model and product.
+                  </li>
                 </li>
                 <li>
-                  Compared different training methods across the course of the
-                  class including evolutionary strategies with mutation.
+                  Our product came in 2nd place at the Fairfield University
+                  StartUp Showcase.
                 </li>
               </ul>
               <Button onClick={toggleAccordion} className="view">
