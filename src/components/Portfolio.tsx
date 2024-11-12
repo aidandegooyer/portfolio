@@ -31,12 +31,7 @@ const Portfolio: React.FC = () => {
   var body = 7;
 
   const [isStacked, setIsStacked] = useState(false);
-  const [activeKey, setActiveKey] = useState<string | null>(null);
   const [isScreenLarge, setIsScreenLarge] = useState(window.innerWidth > 540); // Check initial screen width
-
-  const toggleAccordion = () => {
-    setActiveKey(activeKey === "0" ? null : "0");
-  };
 
   return (
     <>
@@ -120,7 +115,7 @@ const Portfolio: React.FC = () => {
             >
               <h1>Secondhand Marketplace</h1>
               <h6 className="text-secondary description">
-                Django, KoboldCPP, Blip2, React
+                Django, KoboldCPP, Blip2, React, Flutter
               </h6>
             </Col>
             <Col md={isStacked ? "6" : body}>
@@ -134,21 +129,35 @@ const Portfolio: React.FC = () => {
                   suggesting a price and product name/description based on an
                   image of the product.
                 </li>
+                <li>
+                  Created a mobile app using Flutter to allow cleaner and faster
+                  uploading of images to the server, improving workflow.
+                </li>
               </ul>
               <a
-                href="https://github.com/aidandegooyer/evoML"
+                href="https://github.com/amhamiltsyr/SecondHandStoreInventorySystem"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button className="view">View Project</Button>
               </a>
               <a
-                href="https://github.com/aidandegooyer/evoML"
+                href="https://github.com/amhamiltsyr/SecondHandStoreInventorySystem"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Button variant="secondary" className="view">
-                  View Project Source
+                  View Source
+                </Button>
+              </a>
+
+              <a
+                href="https://github.com/aidandegooyer/SecondHandStoreApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" className="view">
+                  View Mobile Source
                 </Button>
               </a>
             </Col>
@@ -159,14 +168,17 @@ const Portfolio: React.FC = () => {
               className={isStacked ? "col-12 text-center" : "col-md-3"}
             >
               <h1>Portfolio Website</h1>
-              <h6 className="text-secondary description">React, Bootstrap</h6>
+              <h6 className="text-secondary description">
+                React, Bootstrap, GH Pages
+              </h6>
             </Col>
             <Col md={isStacked ? "6" : body}>
               <ul>
                 <li>
-                  Designed and developed a responsive site to show off my
+                  Designed and developed a responsive website to show off my
                   projects and resume.
                 </li>
+                <li>Deployed the website to GitHub pages</li>
               </ul>
               <Button className="view" disabled>
                 View Project
@@ -183,41 +195,6 @@ const Portfolio: React.FC = () => {
             </Col>
           </Row>
 
-          <Row className="justify-content-center project">
-            <Col
-              xs={12}
-              className={isStacked ? "col-12 text-center" : "col-md-3"}
-            >
-              <h1>Evolutionary Machine Learning</h1>
-              <h6 className="text-secondary description">
-                TensorFlow, CUDA, NumPy, Pandas
-              </h6>
-            </Col>
-            <Col md={isStacked ? "6" : body}>
-              <ul>
-                <li>
-                  Created, trained, and tested a variety of models (Neural
-                  Network, Particle Swarm, etc.) on a dataset.
-                </li>
-                <li>
-                  Compared different training methods across the course of the
-                  class including evolutionary strategies with mutation.
-                </li>
-              </ul>
-              <Button className="view" disabled>
-                View Project
-              </Button>
-              <a
-                href="https://github.com/aidandegooyer/evoML"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="secondary" className="view">
-                  View Project Source
-                </Button>
-              </a>
-            </Col>
-          </Row>
           <Row className="justify-content-center project">
             <Col
               xs={12}
@@ -242,14 +219,8 @@ const Portfolio: React.FC = () => {
                   StartUp Showcase.
                 </li>
               </ul>
-              <Button onClick={toggleAccordion} className="view">
-                {activeKey === "0" ? "Hide Project" : "View Project"}
-              </Button>
-              <Button variant="secondary" className="view" disabled>
-                View Project Source
-              </Button>
 
-              <Accordion activeKey={activeKey}>
+              <Accordion>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Mock-Ups</Accordion.Header>
                   <Accordion.Body>
@@ -258,6 +229,47 @@ const Portfolio: React.FC = () => {
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
+            </Col>
+          </Row>
+
+          <Row className="justify-content-center project">
+            <Col
+              xs={12}
+              className={isStacked ? "col-12 text-center" : "col-md-3"}
+            >
+              <h1>Evolutionary Machine Learning</h1>
+              <h6 className="text-secondary description">
+                TensorFlow, CUDA, NumPy, Pandas
+              </h6>
+            </Col>
+            <Col md={isStacked ? "6" : body}>
+              <ul>
+                <li>
+                  Created, trained, and tested a variety of models (Neural
+                  Network, Particle Swarm, etc.) on a dataset.
+                </li>
+                <li>
+                  Compared different training methods across the course of the
+                  class including evolutionary strategies with mutation.
+                </li>
+                <li>
+                  This project doesn't have any real direction or ending, I was
+                  just playing around with SciKit Learn, pytorch, TensorFlow,
+                  etc.
+                </li>
+              </ul>
+              <Button className="view" disabled>
+                View Project
+              </Button>
+              <a
+                href="https://github.com/aidandegooyer/evoML"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" className="view">
+                  View Project Source
+                </Button>
+              </a>
             </Col>
           </Row>
         </Container>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Resume.css";
-import resume_pdf from "../assets/ACD  Resume 9-24.pdf";
+import resume_pdf from "../assets/ACD Resume 11-11.pdf";
 
 const Resume: React.FC = () => {
   useEffect(() => {
@@ -53,7 +53,7 @@ const Resume: React.FC = () => {
 
               <section className="resume-section">
                 <h3 className="display-6">Professional Experience</h3>
-                <h5>Software Engineer at Higher Skills</h5>
+                <h5>Lead Software Engineer at Higher Skills</h5>
                 <p>Feb 2024 - Aug 2024</p>
                 <ul>
                   <li>
@@ -67,6 +67,7 @@ const Resume: React.FC = () => {
                     Our product came in 2nd place at the Fairfield University
                     StartUp Showcase.
                   </li>
+                  <li>Secured over $5k in seed funding</li>
                 </ul>
               </section>
 
