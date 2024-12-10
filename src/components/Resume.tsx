@@ -57,17 +57,22 @@ const Resume: React.FC = () => {
                 <p>Feb 2024 - Aug 2024</p>
                 <ul>
                   <li>
-                    Designed, mocked-up, and developed AI-driven software using
-                    OpenAI API and began training an in-house model.
+                    Led a team that designed, mocked-up, and developed AI-driven
+                    software using OpenAI API and began training an in-house
+                    model.
                   </li>
                   <li>
                     Collected usage data to improve the model and product.
                   </li>
                   <li>
                     Our product came in 2nd place at the Fairfield University
-                    StartUp Showcase.
+                    StartUp Showcase, and tied for 1st at the UTA MavPitch
+                    competition.
                   </li>
-                  <li>Secured over $5k in seed funding</li>
+                  <li>
+                    Secured over $20k in seed funding through these
+                    competitions.
+                  </li>
                 </ul>
               </section>
 
