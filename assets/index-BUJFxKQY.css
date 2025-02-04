@@ -1,4 +1,4 @@
-@charset "UTF-8";.custom-headshot{height:auto;max-height:100%;width:auto}.button1{max-width:400px;display:flex;margin:40px auto auto}.portfolio{margin-top:10px;margin-bottom:5px}.resume-section{margin-bottom:30px}/*!
+@charset "UTF-8";.custom-headshot{height:auto;max-height:100%;width:auto}.button1,.button2{max-width:400px;display:flex;margin:8px auto auto}.conveyor-belt{display:flex;overflow-x:hidden;white-space:nowrap;padding:10px 0;width:100%;box-sizing:border-box}.conveyor-item{display:inline-block;background-color:#f8f9fa;border:1px solid #dee2e6;border-radius:5px;padding:10px;margin-right:10px;min-width:150px;text-align:center;flex-shrink:0}.conveyor-item .emoji{font-size:2rem;margin-bottom:5px}.conveyor-item .text{font-size:1.25rem}.portfolio{margin-top:10px;margin-bottom:5px}.resume-section{margin-bottom:30px}/*!
 * Bootstrap Icons v1.11.3 (https://icons.getbootstrap.com/)
 * Copyright 2019-2024 The Bootstrap Authors
 * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
