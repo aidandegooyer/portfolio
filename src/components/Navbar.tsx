@@ -21,6 +21,8 @@ const AppNavbar: React.FC = () => {
             <LinkContainer to="/portfolio">
               <Nav.Link>Portfolio</Nav.Link>
             </LinkContainer>
+          </Nav>
+          <Nav>
             <Nav.Link
               href="https://github.com/aidandegooyer"
               target="_blank"
@@ -28,7 +30,6 @@ const AppNavbar: React.FC = () => {
             >
               GitHub <i className="bi bi-box-arrow-up-right"></i>
             </Nav.Link>
-
             <Nav.Link
               href="https://www.linkedin.com/in/aidandegooyer/"
               target="_blank"

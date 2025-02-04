@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import "./Resume.css";
-import resume_pdf from "../assets/ACD Resume 11-11.pdf";
+import resume_pdf from "../assets/ACD Resume 2-4.pdf";
 
 const Resume: React.FC = () => {
   useEffect(() => {
@@ -13,8 +13,10 @@ const Resume: React.FC = () => {
   return (
     <>
       <a id="a"></a>
+      <div style={{ minHeight: "40px" }} />
+
       <div className="resume-page">
-        <Container className="pt-5 mt-5">
+        <Container className="pt-4 mt-0">
           <Row className="justify-content-center">
             <Col md={8}>
               <h1 className="text-center">My Resume</h1>
@@ -46,7 +48,7 @@ const Resume: React.FC = () => {
                     Relevant Coursework: Evolutionary Machine Learning, Design
                     of OS, Object Oriented Programming in C++
                   </li>
-                  <li>Awards: 6x Dean’s List</li>
+                  <li>Awards: 7x Dean’s List</li>
                   <li>Study Abroad: London, Fall 2023</li>
                 </ul>
               </section>
@@ -54,12 +56,17 @@ const Resume: React.FC = () => {
               <section className="resume-section">
                 <h3 className="display-6">Professional Experience</h3>
                 <h5>Lead Software Engineer at Higher Skills</h5>
-                <p>Feb 2024 - Aug 2024</p>
+                <p>Feb 2024 - Current</p>
                 <ul>
                   <li>
-                    Led a team that designed, mocked-up, and developed AI-driven
-                    software using OpenAI API and began training an in-house
-                    model.
+                    Led a team that designed and developed AI-driven analysis
+                    software using Meta's LLaMa model and began the fine-tuning
+                    process.
+                  </li>
+                  <li>
+                    {" "}
+                    Designed and created a responsive and intuitive frontend for
+                    users to interact with this AI-driven simulation.
                   </li>
                   <li>
                     Collected usage data to improve the model and product.
@@ -111,7 +118,9 @@ const Resume: React.FC = () => {
                 </ul>
                 <h5>Skills:</h5>
                 <ul>
+                  <li>Responsive Frontend Design</li>
                   <li>Machine Learning</li>
+                  <li>Data Visuialization</li>
                   <li>Evolutionary Algorithms</li>
                   <li>Full-Stack Development and Deployment</li>
                 </ul>

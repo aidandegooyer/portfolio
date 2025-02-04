@@ -5,11 +5,8 @@ import {
   Col,
   Button,
   ButtonGroup,
-  Accordion,
-  Image,
+  Alert,
 } from "react-bootstrap";
-import hs1 from "../assets/Screenshot 2024-10-06 at 8.41.09 PM.png";
-import hs2 from "../assets/Screenshot 2024-10-06 at 8.41.22 PM.png";
 import "./Portfolio.css";
 
 const Portfolio: React.FC = () => {
@@ -36,9 +33,10 @@ const Portfolio: React.FC = () => {
   return (
     <>
       <a id="a"></a>
+      <div style={{ minHeight: "40px" }} />
 
       <div className="resume-page">
-        <Container className="pt-5 mt-5">
+        <Container className="pt-4 mt-0">
           <Row className="justify-content-center title">
             <Col md={8}>
               <h1 className="text-center title">My Portfolio</h1>
@@ -69,6 +67,75 @@ const Portfolio: React.FC = () => {
               xs={12}
               className={isStacked ? "col-12 text-center" : "col-md-3"}
             >
+              <h1>Higher Skills</h1>
+              <h6
+                className="text-secondary description"
+                style={{ marginBottom: "4px" }}
+              >
+                <strong>Frontend:</strong> Figma, React, React-Bootstrap
+              </h6>
+              <h6 className="text-secondary description">
+                <strong>Backend:</strong> Asyncio-Http, Vosk, WebRTC, Django,
+                LLaMa, Firebase
+              </h6>
+            </Col>
+            <Col md={isStacked ? "6" : body}>
+              <p>
+                Higher Skills is a cutting-edge training platform dedicated to
+                equipping individuals with the tools they need to excel in
+                today's competitive job market. Through utilizing a
+                self-assessment feature enhanced with speech analysis, body
+                language detection, and gamification elements, Higher Skills
+                aims to assess, teach, and refine soft skills through AI-guided
+                simulations and interview preparation.{" "}
+              </p>
+
+              <ul>
+                <li>
+                  Designed and developed AI-driven analysis software using
+                  Meta's LLaMa model and began the fine-tuning process.
+                </li>
+                <li>
+                  Designed and created a responsive and intuitive frontend for
+                  users to interact with this AI-driven simulation.
+                </li>
+                <li>Collected usage data to improve the model and product.</li>
+
+                <li>
+                  Our product came in 2nd place at the Fairfield University
+                  StartUp Showcase, and 1st place in the UTA MavPitch
+                  competition, where we raised over $20,000 in pre-seed funding
+                </li>
+              </ul>
+
+              {/*<Accordion>
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>Mock-Ups</Accordion.Header>
+                  <Accordion.Body>
+                    <Image className="project" rounded fluid src={hs1} />
+                    <Image rounded fluid src={hs2} />
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>*/}
+              <Alert variant="info">
+                Note: This project is proprietary and private until publically
+                released. Please contact me for a demo. The projects listed
+                below are all open-source and public. Read more{" "}
+                <a
+                  href="https://www.fairfield.edu/news/2024/april/start-up-showcase-team-higher-skills.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  here.
+                </a>{" "}
+              </Alert>
+            </Col>
+          </Row>
+          <Row className="justify-content-center project">
+            <Col
+              xs={12}
+              className={isStacked ? "col-12 text-center" : "col-md-3"}
+            >
               {" "}
               <h1>Water Meter Project</h1>
               <h6 className="text-secondary description">
@@ -90,6 +157,12 @@ const Portfolio: React.FC = () => {
                   water delivery, saving hundreds in expedited delivery fees.
                 </li>
               </ul>
+              <Alert variant="warning">
+                Note: The backend for this project is deployed in a location I
+                cannot access for a few months, and due to a DNS issue, is
+                unavailable. The website is still visible but the data is not
+                accurate/loading.
+              </Alert>
               <a
                 href="https://aidandegooyer.github.io/water-meter/"
                 target="_blank"
@@ -139,16 +212,7 @@ const Portfolio: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="view">View Project</Button>
-              </a>
-              <a
-                href="https://github.com/amhamiltsyr/SecondHandStoreInventorySystem"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="secondary" className="view">
-                  View Source
-                </Button>
+                <Button className="view">View Project Source</Button>
               </a>
 
               <a
@@ -192,43 +256,6 @@ const Portfolio: React.FC = () => {
                   View Project Source
                 </Button>
               </a>
-            </Col>
-          </Row>
-
-          <Row className="justify-content-center project">
-            <Col
-              xs={12}
-              className={isStacked ? "col-12 text-center" : "col-md-3"}
-            >
-              <h1>HigherSkills</h1>
-              <h6 className="text-secondary description">
-                Django, OpenAI, MySQL, Figma
-              </h6>
-            </Col>
-            <Col md={isStacked ? "6" : body}>
-              <ul>
-                <li>
-                  Designed, mocked-up, and developed AI-driven software using
-                  OpenAI API and began training an in-house model.
-                  <li>
-                    Collected usage data to improve the model and product.
-                  </li>
-                </li>
-                <li>
-                  Our product came in 2nd place at the Fairfield University
-                  StartUp Showcase.
-                </li>
-              </ul>
-
-              <Accordion>
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>Mock-Ups</Accordion.Header>
-                  <Accordion.Body>
-                    <Image className="project" rounded fluid src={hs1} />
-                    <Image rounded fluid src={hs2} />
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
             </Col>
           </Row>
 
