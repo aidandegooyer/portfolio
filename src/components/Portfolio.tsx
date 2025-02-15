@@ -78,6 +78,9 @@ const Portfolio: React.FC = () => {
                 <strong>Backend:</strong> Asyncio-Http, Vosk, WebRTC, Django,
                 LLaMa, Firebase
               </h6>
+              <h6 className="text-secondary description">
+                <strong>Documentation:</strong> Obsidian, Quartz,
+              </h6>
             </Col>
             <Col md={isStacked ? "6" : body}>
               <p>
@@ -98,6 +101,10 @@ const Portfolio: React.FC = () => {
                 <li>
                   Designed and created a responsive and intuitive frontend for
                   users to interact with this AI-driven simulation.
+                </li>
+                <li>
+                  Wrote extensive API documentation and designed internal
+                  website to navigate it for use between our development team.
                 </li>
                 <li>Collected usage data to improve the model and product.</li>
 
