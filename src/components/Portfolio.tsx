@@ -62,6 +62,65 @@ const Portfolio: React.FC = () => {
               )}
             </Col>
           </Row>
+
+          <Row className="justify-content-center project">
+            <Col
+              xs={12}
+              className={isStacked ? "col-12 text-center" : "col-md-3"}
+            >
+              <h1>College Counter</h1>
+              <h6
+                className="text-secondary description"
+                style={{ marginBottom: "4px" }}
+              >
+                <strong>Frontend:</strong> React, Bootstrap
+              </h6>
+              <h6 className="text-secondary description">
+                <strong>Backend:</strong> Flask, PostgreSQL, Docker, Google
+                Cloud
+              </h6>
+            </Col>
+            <Col md={isStacked ? "6" : body}>
+              <p>
+                College Counter is a web application that allows anyone to
+                follow collegiate counter-strike matches. Users can view
+                upcoming matches, past matches, and team statistics.{" "}
+              </p>
+
+              <ul>
+                <li>
+                  Designed a ranking algorithm to rank teams based on their
+                  performance in matches using the ELO formula.
+                </li>
+                <li>
+                  Designed and created a responsive frontend for users to
+                  interact with the data.
+                </li>
+                <li>
+                  Created a backend API to interact with the database and
+                  frontend.
+                </li>
+                <li>Deployed the website to Google Cloud using Docker</li>
+              </ul>
+              <a
+                href="https://collegecounter.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="view">View Project</Button>
+              </a>
+              <a
+                href="https://github.com/aidandegooyer/CollegeCounter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary" className="view">
+                  View Project Source
+                </Button>
+              </a>
+            </Col>
+          </Row>
+
           <Row className="justify-content-center project">
             <Col
               xs={12}

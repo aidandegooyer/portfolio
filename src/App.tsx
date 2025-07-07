@@ -1,25 +1,60 @@
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
-import Home from "./components/Home";
-import Resume from "./components/Resume";
-import AppNavbar from "./components/Navbar";
-import Portfolio from "./components/Portfolio";
-import "./custom.scss";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  ScrollRestoration,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import Resume from "./pages/Resume";
+import Navbar from "./components/Navbar";
+import Portfolio from "./pages/Portfolio";
 import "./App.css";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Navbar />
+        <ScrollRestoration />
+        <div className="app-container mt-8">
+          <Home />
+        </div>
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/resume",
+    element: (
+      <>
+        <Navbar />
+        <ScrollRestoration />
+        <div className="app-container mt-8">
+          <Resume />
+        </div>
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/portfolio",
+    element: (
+      <>
+        <Navbar />
+        <ScrollRestoration />
+        <div className="app-container mt-8">
+          <Portfolio />
+        </div>
+        <Footer />
+      </>
+    ),
+  },
+]);
+
 const App: React.FC = () => {
-  return (
-    <Router>
-      <AppNavbar />
-      <div className="app-container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
