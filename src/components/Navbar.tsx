@@ -27,6 +27,10 @@ function Navbar() {
       } else {
         document.documentElement.classList.remove("dark");
       }
+    } else {
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     }
     setTimeout(() => {
       document.body.classList.remove("transition-none!");

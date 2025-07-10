@@ -92,29 +92,43 @@ function Home() {
         </h2>
       </div>
 
-      <div className="mb-8 flex w-full max-w-[650px] flex-col items-center space-y-4">
+      <div className="mb-8 flex w-full max-w-[650px] flex-col items-center space-y-4 selection:bg-indigo-500! dark:selection:bg-sky-500!">
         <p className="text-foreground">
           If you have any questions or would like to get in touch, feel free to
           reach out using the form below.
         </p>
 
-        <Input
-          type="text"
-          placeholder="Name"
-          className="w-full rounded-[.75rem] border-gray-200 dark:border-gray-700 dark:focus:border-sky-400"
-        />
-        <Input
-          type="email"
-          placeholder="Email"
-          className="w-full rounded-[.75rem] border-gray-200 dark:border-gray-700 dark:focus:border-sky-400"
-        />
-        <Textarea
-          placeholder="Message"
-          className="h-32 w-full resize-y rounded-[.75rem] border-gray-200 dark:border-gray-700 dark:focus:border-sky-400"
-        />
-        <div className="flex w-full justify-end">
-          <Button className="rounded-[0.5rem]">Send Message</Button>
-        </div>
+        <form
+          action="https://formsubmit.co/601f8cd864276aafb44535bb50edc7ed"
+          method="POST"
+          className="flex w-full flex-col space-y-4"
+        >
+          <Input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            className="w-full rounded-[.75rem] border-gray-200 dark:border-gray-700 dark:focus:border-sky-400"
+          />
+          <Input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            className="w-full rounded-[.75rem] border-gray-200 dark:border-gray-700 dark:focus:border-sky-400"
+          />
+          <Textarea
+            name="message"
+            placeholder="Message"
+            required
+            className="h-32 w-full resize-y rounded-[.75rem] border-gray-200 dark:border-gray-700 dark:focus:border-sky-400"
+          />
+          <div className="flex w-full justify-end">
+            <Button className="rounded-[0.5rem]" type="submit">
+              Send Message
+            </Button>
+          </div>
+        </form>
       </div>
     </div>
   );

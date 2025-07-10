@@ -27,7 +27,7 @@ function Resume() {
             Education
           </h2>
           <h5>Syracuse University</h5>
-          <p>2021-2025, GPA 3.9</p>
+          <p>2021-2025, GPA 3.8, Magna Cum Laude</p>
           <ul>
             <li>B.S. Computer Science</li>
             <li>B.A. Economics</li>
@@ -36,7 +36,7 @@ function Resume() {
               Relevant Coursework: Evolutionary Machine Learning, Design of OS,
               Object Oriented Programming in C++
             </li>
-            <li>Awards: 7x Dean’s List</li>
+            <li>Awards: 8x Dean’s List</li>
             <li>Study Abroad: London, Fall 2023</li>
           </ul>
         </section>
@@ -71,27 +71,29 @@ function Resume() {
           <h2 className="z-10 mb-5 border-b-2 border-gray-200 py-4 pb-1 text-4xl transition-colors duration-300 dark:border-gray-700">
             Projects
           </h2>
-          <Link to="/portfolio" id="header">
-            <Button className="group text-muted-foreground flex rounded-[0.5rem]">
-              <div>Go to Portfolio</div>
-              <div className="ml-0 transition-all group-hover:ml-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-chevron-right-icon lucide-chevron-right"
-                >
-                  <path d="m9 18 6-6-6-6" />
-                </svg>
-              </div>
-            </Button>
-          </Link>
+          <div className="my-4">
+            <Link to="/portfolio" id="header">
+              <Button className="group text-muted-foreground flex rounded-[0.5rem]">
+                <div>Go to Portfolio</div>
+                <div className="ml-0 transition-all group-hover:ml-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-chevron-right-icon lucide-chevron-right"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </div>
+              </Button>
+            </Link>
+          </div>
         </section>
 
         <section className="resume-section">
