@@ -1,7 +1,7 @@
 import ReactiveCard from "@/components/ReactiveCard";
 import CCLogo from "@/assets/C Logo@0.5x.png";
 import HSLogo from "@/assets/icon.png";
-import WaterLogo from "@/assets/water.png";
+import EyesightLogo from "@/assets/eyesight.png";
 import Button from "@/components/Button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -168,15 +168,16 @@ function FeaturedProjects() {
       />
 
       <Project
-        title={"Home Water Meter"}
+        title={"Eyesight Records"}
         description={
-          "The water meter is a sensing system that I designed, built, and installed into my home's water storage system. It uses an ultrasonic sensor to determine water level and displays that information on a custom frontend in kiosk mode."
+          "Created a landing page for my record label, Eyesight Records. The page showcases the label's artists and their music, providing a platform for fans to discover new music."
         }
-        tools={["Flask", "Raspberry Pi/Linux", "HTML/CSS"]}
-        image={WaterLogo}
+        tools={["NextJS", "Sanity CMS", "Social Media Integration"]}
+        image={EyesightLogo}
         buttonOnClick={() => {
-          window.open(`${window.location.origin}/watermeter.html`, "_blank");
+          window.open("https://www.eyesightrecords.com", "_blank");
         }}
+        imageFull
       />
 
       <Link to="/portfolio" id="header">

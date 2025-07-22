@@ -2,6 +2,7 @@ import Project from "@/components/Project";
 import CCLogo from "@/assets/C Logo@0.5x.png";
 import HSLogo from "@/assets/icon.png";
 import WaterLogo from "@/assets/water.png";
+import EyesightLogo from "@/assets/eyesight.png";
 
 function Portfolio() {
   return (
@@ -38,6 +39,19 @@ function Portfolio() {
               "_blank",
             );
           }}
+        />
+
+        <Project
+          title={"Eyesight Records"}
+          description={
+            "Created a landing page for my record label, Eyesight Records. The page showcases the label's artists and their music, providing a platform for fans to discover new music."
+          }
+          tools={["NextJS", "Sanity CMS", "Social Media Integration"]}
+          image={EyesightLogo}
+          buttonOnClick={() => {
+            window.open("https://www.eyesightrecords.com", "_blank");
+          }}
+          imageFull
         />
 
         <Project
