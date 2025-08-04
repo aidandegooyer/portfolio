@@ -19,6 +19,17 @@ const Button: React.FC<ButtonProps> = ({
     large: "px-6 py-3 text-lg",
   };
 
+  if (props.disabled) {
+    return (
+      <button
+        className={`${sizeClasses[size]} cursor-not-allowed rounded-2xl bg-gray-400 text-white shadow-lg outline-offset-2 transition-all ${className}`}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+
   return (
     <button
       className={`${sizeClasses[size]} anim-bg-gradient cursor-pointer rounded-2xl bg-indigo-600 text-white shadow-2xl shadow-indigo-600/20 outline-offset-2 outline-indigo-700 transition-all hover:scale-105 hover:bg-indigo-700 focus:outline-2 dark:bg-sky-500 dark:shadow-sky-500/50 dark:outline-sky-600 dark:hover:bg-sky-600 ${className} `}

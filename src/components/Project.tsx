@@ -8,6 +8,7 @@ interface projectProps extends React.HTMLAttributes<HTMLDivElement> {
   image?: string;
   imageFull?: boolean;
   buttonOnClick?: () => void;
+  buttonDisabled?: boolean;
 }
 
 function Project({ className, ...props }: projectProps) {
@@ -35,7 +36,11 @@ function Project({ className, ...props }: projectProps) {
           ))}
         </div>
         <div>
-          <Button className="rounded-[0.5rem]" onClick={props.buttonOnClick}>
+          <Button
+            className="rounded-[0.5rem]"
+            onClick={props.buttonOnClick}
+            disabled={props.buttonDisabled}
+          >
             View
           </Button>
         </div>

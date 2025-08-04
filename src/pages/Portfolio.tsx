@@ -3,6 +3,7 @@ import CCLogo from "@/assets/C Logo@0.5x.png";
 import HSLogo from "@/assets/icon.png";
 import WaterLogo from "@/assets/water.png";
 import EyesightLogo from "@/assets/eyesight.png";
+import Globe from "@/assets/globe.svg";
 
 function Portfolio() {
   return (
@@ -52,6 +53,16 @@ function Portfolio() {
             window.open("https://www.eyesightrecords.com", "_blank");
           }}
           imageFull
+        />
+
+        <Project
+          title={"This Website"}
+          description={
+            "This website is built from scratch using React and TypeScript, showcasing my portfolio and projects. It is designed to be responsive and user-friendly, providing an overview of my work and skills."
+          }
+          tools={["React", "GitHub Pages"]}
+          image={Globe}
+          buttonDisabled
         />
 
         <Project
