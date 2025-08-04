@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   ScrollRestoration,
 } from "react-router-dom";
@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar";
 import Portfolio from "./pages/Portfolio";
 import "./App.css";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: (
